@@ -9,6 +9,10 @@
 .formOutline{
   width: 40%;
   align-self: center;
+  border: 1px solid #c4c4c4;
+  border-radius: 20px;
+  padding: 2em;
+  box-shadow: 3px 3px 3px #f3f3f3;
 }
 
 .message{
