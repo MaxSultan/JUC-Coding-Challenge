@@ -38,8 +38,7 @@ function App() {
   return (
     <div className="App">
       {message !=='' && <div key={name} className="message">{message}</div>}
-      <div className="formOutline">
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} className="formOutline">
           <Header as="h1">Contact Us</Header>
           <Form.Field>
             <label>Name</label>
@@ -85,10 +84,12 @@ function App() {
             onClick={()=>setAgreement(!agreement)}
             />
           </Form.Field>
-          {name !== '' && email !== '' && agreement === true ? <Button type='submit'>Submit</Button> : <Button disabled>Submit</Button> }
-          <Button onClick={()=> clear()}>Clear</Button>
+          <Button.Group attached='bottom'>
+          {name !== '' && email !== '' && agreement === true ? <Button positive type='submit' icon="send" content="Submit" labelPosition='left'/> : <Button disabled positive  icon="send" labelPosition='left' content="Submit"/> }
+          <Button.Or/>
+          <Button content="Clear" icon='erase' labelPosition="right" onClick={()=> clear()}/>
+          </Button.Group>
         </Form>
-      </div>
     </div>
   );
 }
