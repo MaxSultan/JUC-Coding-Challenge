@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  background: linear-gradient(#ffffff, #c4c4c4)
 }
 
 .formOutline{
@@ -12,7 +13,8 @@
   border: 1px solid #c4c4c4;
   border-radius: 20px;
   padding: 2em;
-  box-shadow: 3px 3px 3px #f3f3f3;
+  box-shadow: 3px 3px 3px #000000;
+  background-color: #ffffff;
 }
 
 .message{

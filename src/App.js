@@ -29,10 +29,8 @@ function App() {
     Axios.post('https://my-json-server.typicode.com/JustUtahCoders/interview-users-api/users', userObj)
     .then(res => {
       res.status === 201 && setMessage(`Thank you ${name} for your submission!`);
-      setName('')
-      setEmail('')
-      setBirthDate('')
-      setAgreement(false)
+      clear()
+      setTimeout(()=>setMessage(''), 4000)
     })
     .catch(err=> setMessage(err.message))
   }
