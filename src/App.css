@@ -26,7 +26,7 @@
   color: white;
   background-color: rgb(65, 109, 255);
   animation-name: MessageIn;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
   z-index: 9999;
 }
