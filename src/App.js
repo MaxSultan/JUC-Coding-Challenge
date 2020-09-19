@@ -64,16 +64,18 @@ function App() {
           <Form.Field>
             <label>Birthdate</label>
             <DatePicker 
+            isClearable
             placeholderText="Birthdate"
             showYearDropdown
             dateFormatCalendar="MMMM"
             yearDropdownItemNumber={50}
             scrollableYearDropdown
-            width="100%"
-            selected={new Date()}            
+            selected={birthDate}            
             value={birthDate} 
             name="date" 
             onChange={(date) => setBirthDate(date)} 
+            popperClassName="front"
+            popperPlacement="top-end"
             />
           </Form.Field>
           <Form.Field>
@@ -84,10 +86,10 @@ function App() {
             onClick={()=>setAgreement(!agreement)}
             />
           </Form.Field>
-          <Button.Group attached='bottom'>
+          <Button.Group>
           {name !== '' && email !== '' && agreement === true ? <Button positive type='submit' icon="send" content="Submit" labelPosition='left'/> : <Button disabled positive  icon="send" labelPosition='left' content="Submit"/> }
-          <Button.Or/>
-          <Button content="Clear" icon='erase' labelPosition="right" onClick={()=> clear()}/>
+          <Button.Or style={{zIndex: '1'}}/>
+          <Button content="Clear" icon='erase' labelPosition="right" onClick={()=> clear()} style={{zIndex: '0'}}/>
           </Button.Group>
         </Form>
     </div>

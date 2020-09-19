@@ -47,3 +47,11 @@
   }
 }
 
+.behind{
+  z-index: 1;
+}
+
+.front{
+  z-index: 9999;
+  position: relative;
+}
